@@ -16,6 +16,7 @@ def convert_nc_to_txt(nc_file_path, output_txt_path, max_file_size_mb=100):
         print("No dimensions found in the dataset.")
         return
 
+
     # Find the largest dimension to iterate over to save memory
     largest_dim = max(dims, key=lambda d: ds.dims[d])
     largest_dim_size = ds.dims[largest_dim]
